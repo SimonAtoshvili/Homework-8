@@ -1,0 +1,222 @@
+/* General */
+section {
+    margin-bottom: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Task 1 */
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    box-shadow: 15px 10px red;
+    transition: 2s;
+}
+.square:hover {
+    box-shadow: 15px 10px 20px red;
+    transform: scale(2);
+    cursor: pointer;
+}
+
+/* Task 2 */
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: circle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes circle {
+    from {
+        background-color: rgba(255, 255, 0, 1);
+    }
+    to {
+        background-color: rgba(255, 255, 0, 0);
+    }
+}
+
+/* Task 3 */
+
+.task3-text {
+    width: 50%;
+    height: 80px;
+    background-color: aqua;
+    font-size: 20px;
+    animation-name: font-size;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+@keyframes font-size {
+    from {
+        font-size: 20px;
+    }
+    to {
+        font-size: 8px;
+    }
+}
+
+/* Task 4 */
+
+header {
+    height: 100px;
+    background-color: darkgoldenrod;
+    width: 100%;
+    font-size: 25px;
+    padding: 20px 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li{
+    padding: 5px;
+}
+
+li:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: larger;
+    transition: 0.5s 0.1s;
+}
+
+/* Task 5 */
+
+img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    rotate: 0deg;
+    animation-name: img;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes img {
+    0% {
+        rotate: 0deg;
+    }
+    5% {
+        rotate: -18deg;
+    }
+    10% {
+        rotate: -36deg;
+    }
+    15% {
+        rotate: -54deg;
+    }
+    20% {
+        rotate: -72deg;
+    }
+    25% {
+        rotate: -90deg;
+    }
+    30% {
+        rotate: -108deg;
+    }
+    35%{
+        rotate: -126deg;
+    }
+    40% {
+        rotate: -144deg;
+    }
+    45% {
+        rotate: -162deg;
+    }
+    50% {
+        rotate: -180deg;
+    }
+    55% {
+        rotate: -198deg;
+    }
+    60% {
+        rotate: -216deg;
+    }
+    65% {
+        rotate: -234deg;
+    }
+    70% {
+        rotate: -252deg;
+    }
+    75% {
+        rotate: -270deg;
+    }
+    80% {
+        rotate: -288deg;
+    }
+    85% {
+        rotate: -306deg;
+    }
+    90% {
+        rotate: -324deg;
+    }
+    95% {
+        rotate: -342;
+    }
+    100%{
+        rotate: -360deg;
+    }
+}
+
+
+/* Task 6 */
+
+.task6-mother {
+    min-width: 800px;
+    width: 60%;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid #000000;
+    position: relative;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.task6-child {
+    width: 0;
+    min-width: 0;
+    height: inherit;
+    border-radius: 50px;
+    background-color: rgba(255, 127, 80, 0);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation-name: loading;
+    animation-duration: 5s;
+}
+
+@keyframes loading {
+    from {
+        min-width: 0;
+        width: 0;
+        background-color: rgba(255, 127, 80, 0);
+    }
+    to {
+        min-width: 800px;
+        width: 100%;
+        background-color: rgba(255, 127, 80, 1);
+    }
+}
